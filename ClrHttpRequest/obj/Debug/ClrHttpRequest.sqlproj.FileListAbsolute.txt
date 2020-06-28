@@ -8,3 +8,13 @@ C:\Users\hjelm\OneDrive\Career\repos\github\sqlclr-http-request\ClrHttpRequest\o
 C:\Users\hjelm\OneDrive\Career\repos\github\sqlclr-http-request\ClrHttpRequest\obj\Debug\predeploy.sql
 C:\Users\hjelm\OneDrive\Career\repos\github\sqlclr-http-request\ClrHttpRequest\obj\Debug\ClrHttpRequest.dll
 C:\Users\hjelm\OneDrive\Career\repos\github\sqlclr-http-request\ClrHttpRequest\obj\Debug\ClrHttpRequest.pdb
+D:\Demo\sqlclr-http-request\ClrHttpRequest\bin\Debug\ClrHttpRequest.dacpac
+D:\Demo\sqlclr-http-request\ClrHttpRequest\bin\Debug\ClrHttpRequest.dll
+D:\Demo\sqlclr-http-request\ClrHttpRequest\bin\Debug\ClrHttpRequest.pdb
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\ClrHttpRequest.sqlprojAssemblyReference.cache
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\Model.xml
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\refactor.xml
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\postdeploy.sql
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\predeploy.sql
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\ClrHttpRequest.dll
+D:\Demo\sqlclr-http-request\ClrHttpRequest\obj\Debug\ClrHttpRequest.pdb

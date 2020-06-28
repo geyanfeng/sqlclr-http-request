@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.IO;
 using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Web;
 using System.Xml.Linq;
 
 public partial class UserDefinedFunctions
@@ -20,6 +23,7 @@ public partial class UserDefinedFunctions
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlXml clr_http_request(string requestMethod, string url, string parameters, string headersXml, string optionsXml)
     {
+        ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);//验证服务器证书回调自动验证
         var debugXml = new XElement("Debug");
         debugXml.Add(GetDebugStepXElement("Starting",
             new XElement(
@@ -232,6 +236,11 @@ public partial class UserDefinedFunctions
                             {
                                 // Retrieve response string
                                 responseString = reader.ReadToEnd();
+
+                                if(options.ContainsKey("url_decode") && bool.Parse(options["url_decode"]) == true)
+                                {
+                                    responseString = HttpUtility.UrlDecode(responseString);
+                                }
                             }
                         }
                         debugXml.Add(GetDebugStepXElement("Handled Option 'convert_response_to_base64' and Retrieved Response Stream"));
@@ -352,4 +361,9 @@ public partial class UserDefinedFunctions
 
         return returnXml;
     }
+    public static bool CheckValidationResult(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
+    {   // 总是接受  
+        return true;
+    }
+
 }
