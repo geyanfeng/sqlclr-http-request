@@ -70,6 +70,7 @@ If you're waiting for me or have any questions for me, bug me!
   Sets the [HttpWebRequest.AutomaticDecompression Property](https://docs.microsoft.com/en-us/dotnet/api/system.net.httpwebrequest.automaticdecompression) to automatically decompress the response
 
   Example: `<auto_decompress>true</auto_decompress>`
+- url_decode
 
 - convert_response_to_base64
 
