@@ -237,10 +237,11 @@ public partial class UserDefinedFunctions
                                 // Retrieve response string
                                 responseString = reader.ReadToEnd();
 
-                                if(options.ContainsKey("url_decode") && bool.Parse(options["url_decode"]) == true)
+                               /* if(options.ContainsKey("url_decode") && bool.Parse(options["url_decode"]) == true)
                                 {
+                                    System.Text.Encoding.
                                     responseString = HttpUtility.UrlDecode(responseString);
-                                }
+                                }*/
                             }
                         }
                         debugXml.Add(GetDebugStepXElement("Handled Option 'convert_response_to_base64' and Retrieved Response Stream"));
